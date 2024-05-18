@@ -34,7 +34,10 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       //Body Show the Four Pages in the List screenList
-      body:screenList[myIndex],
+      body:IndexedStack(
+          index: myIndex,
+          children: screenList,
+      ),
 
       //BottomNavigationBar by Google Navigation
       bottomNavigationBar: Padding(
