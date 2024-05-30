@@ -36,6 +36,8 @@ dependencies:
   dropdown_button2: ^2.3.9
   youtube_api: ^1.0.4
   animated_search_bar: ^2.7.1
+  pod_player: ^0.2.0
+
 
 
   # The following adds the Cupertino Icons font to your application.

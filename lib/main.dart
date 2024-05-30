@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:multiversion_holy_bible/welcomepage.dart';
 import 'package:multiversion_holy_bible/PagesFiles/HomePage.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:multiversion_holy_bible/PagesFiles/BibleVideoPlayer.dart';
 
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: '/',
       routes: {
-        '/' : (context) => const WelcomePage(),
+        '/' : (context) =>  WelcomePage(),
         // '/home': (context) => const MyHomePage(),
       },
       title: 'MultiVersion Holy Bible',
