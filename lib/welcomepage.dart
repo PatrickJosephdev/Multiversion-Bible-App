@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:multiversion_holy_bible/color file/app_colors.dart' as AppColors;
+import 'package:multiversion_holy_bible/color file/app_colors.dart'
+    as AppColors;
 import 'package:multiversion_holy_bible/PagesFiles/HomePage.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 
 class WelcomePage extends StatefulWidget {
   const WelcomePage({super.key});
@@ -12,7 +12,6 @@ class WelcomePage extends StatefulWidget {
 }
 
 class _WelcomePageState extends State<WelcomePage> {
-
   bool _isLoading = false; // Track loading state
 
   Future<void> _simulateLoading() async {
@@ -22,7 +21,8 @@ class _WelcomePageState extends State<WelcomePage> {
     await Future.delayed(const Duration(seconds: 2)); // Simulate 5-second delay
     setState(() {
       _isLoading = false; // Hide loading indicator
-      Navigator.push(context, MaterialPageRoute(builder: (context) => const MyHomePage()));
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => const MyHomePage()));
     });
   }
 
@@ -32,7 +32,7 @@ class _WelcomePageState extends State<WelcomePage> {
     super.initState();
     _simulateLoading();
   }
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,30 +40,27 @@ class _WelcomePageState extends State<WelcomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-                'MultiVersion Holy Bible',
+            Text('MultiVersion Holy Bible',
                 style: GoogleFonts.acme(
-                  textStyle: TextStyle(
-                    fontSize: 30,
-                    color: AppColors.primaryColor,
-                    letterSpacing: 1.0,
-                  )
-                )
-            ),
+                    textStyle: TextStyle(
+                  fontSize: 30,
+                  color: AppColors.primaryColor,
+                  letterSpacing: 1.0,
+                ))),
             Image.asset(
-                'logo.png',
-                width: 160,
-                height: 160,
+              'assets/logo.png',
+              width: 160,
+              height: 160,
             ),
-            const SizedBox(height: 200,),
+            const SizedBox(
+              height: 200,
+            ),
             _isLoading // Conditionally show loading indicator
                 ? const CircularProgressIndicator()
                 : Container(),
           ],
         ),
       ),
-
-
     );
   }
 }
