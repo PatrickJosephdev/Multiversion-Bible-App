@@ -86,6 +86,7 @@ class _BibleVideoPageState extends State<BibleVideoPage> {
                     label: 'Search More on ${widget.searchString}',
                     controller: _controller,
                     labelStyle: const TextStyle(fontSize: 16),
+                    height: 30,
                     searchStyle: const TextStyle(color: Colors.black),
                     cursorColor: Colors.black,
                     textInputAction: TextInputAction.done,
@@ -119,16 +120,16 @@ class _BibleVideoPageState extends State<BibleVideoPage> {
                     ),
 
           ),
-          IconButton(
-            icon: Icon(Icons.search), // Replace with your desired icon
-            onPressed: () {
-              // Trigger search functionality here
-              setState(() {
-                widget.searchString = _controller.text; // Get text from controller
-              });
-              callAPI();
-            },
-          ),
+          // IconButton(
+          //   icon: Icon(Icons.search), // Replace with your desired icon
+          //   onPressed: () {
+          //     // Trigger search functionality here
+          //     setState(() {
+          //       widget.searchString = _controller.text; // Get text from controller
+          //     });
+          //     callAPI();
+          //   },
+          // ),
           Expanded(
             child: ListView(
               children: videoResult.map<Widget>(listItem).toList(),

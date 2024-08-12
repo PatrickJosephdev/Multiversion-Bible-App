@@ -64,45 +64,114 @@ class _SettingPageState extends State<SettingPage> {
               padding: const EdgeInsets.all(20),
               scrollDirection: Axis.vertical,
               children: [
-                Text(
-                  'Favourites',
-                  style: TextStyle(fontSize: 25, color: AppColors.primaryColor),
+                InkWell(
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text('Dialog Title'),
+                            content: Text('This is a content Dialog'),
+                            actions: [
+                              TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('Close'))
+                            ],
+                          );
+                        });
+                  },
+                  child: Text(
+                    'Favourites',
+                    style:
+                        TextStyle(fontSize: 25, color: AppColors.primaryColor),
+                  ),
                 ),
                 SizedBox(
                   height: 10.0,
                 ),
-                Text(
-                  'Notifications',
-                  style: TextStyle(fontSize: 25, color: AppColors.primaryColor),
+                InkWell(
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text('Dialog Title'),
+                            content: Text('This is a content Dialog'),
+                            actions: [
+                              TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('Close'))
+                            ],
+                          );
+                        });
+                  },
+                  child: Text(
+                    'Notifications',
+                    style:
+                        TextStyle(fontSize: 25, color: AppColors.primaryColor),
+                  ),
                 ),
                 SizedBox(
                   height: 10.0,
                 ),
-                Text(
-                  'Feedback',
-                  style: TextStyle(fontSize: 25, color: AppColors.primaryColor),
+                InkWell(
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text('Dialog Title'),
+                            content: Text('This is a content Dialog'),
+                            actions: [
+                              TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('Close'))
+                            ],
+                          );
+                        });
+                  },
+                  child: Text(
+                    'Feedback',
+                    style:
+                        TextStyle(fontSize: 25, color: AppColors.primaryColor),
+                  ),
                 ),
                 SizedBox(
                   height: 10.0,
                 ),
-                Text(
-                  'About App',
-                  style: TextStyle(fontSize: 25, color: AppColors.primaryColor),
+                InkWell(
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            title: Text('Dialog Title'),
+                            content: Text('This is a content Dialog'),
+                            actions: [
+                              TextButton(
+                                  onPressed: () {
+                                    Navigator.of(context).pop();
+                                  },
+                                  child: Text('Close'))
+                            ],
+                          );
+                        });
+                  },
+                  child: Text(
+                    'About App',
+                    style:
+                        TextStyle(fontSize: 25, color: AppColors.primaryColor),
+                  ),
                 ),
                 SizedBox(
                   height: 10.0,
                 ),
-                Text(
-                  'Share App',
-                  style: TextStyle(fontSize: 25, color: AppColors.primaryColor),
-                ),
-                SizedBox(
-                  height: 10.0,
-                ),
-                Text(
-                  'Credits',
-                  style: TextStyle(fontSize: 25, color: AppColors.primaryColor),
-                )
               ],
             ))
           ],
